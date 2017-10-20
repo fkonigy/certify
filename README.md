@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create and manage certificate authorities (CA) both root and intermediate.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby 2.4.1
 
-* System dependencies
+* Rails 5.1.4
 
-* Configuration
+* SQLite3 for development environment
 
-* Database creation
+* PostgreSQL 9.5 for production environment
 
-* Database initialization
+* Root and Intermediate CA
 
-* How to run the test suite
+* Create certificate profiles
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Issue certificate based on profiles
