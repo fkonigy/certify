@@ -1,5 +1,7 @@
 <%= form_with model: @ca do |form| %>
 Subject: <%= form.text_field :subject, :id => :subject %> <br/>
 Serial Number: <%= form.text_field :serial_number, :id => :serial_number %> <br/>
-<%= form.submit 'Create CA' %>
+Not Before: <%= form.text_field :not_before, :id => :not_before %> <br/>
+Not After: <%= form.text_field :not_after, :id => :not_after %> <br/>
+<%= form.submit 'Submit' %>
 <% end %>
