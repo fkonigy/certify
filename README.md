@@ -1,3 +1,6 @@
+# Status
+[https://travis-ci.org/fkonigy/certify.svg?branch=master](https://travis-ci.org/fkonigy/certify)
+
 # README
 
 Create and manage certificate authorities (CA) both root and intermediate.
