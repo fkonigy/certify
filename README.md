@@ -1,6 +1,7 @@
 # Status
 [![Build Status](https://travis-ci.org/fkonigy/certify.svg?branch=master)](https://travis-ci.org/fkonigy/certify)
-- Code: [![Code Climate](https://codeclimate.com/github/fkonigy/certify/badges/gpa.svg)](https://codeclimate.com/github/fkonigy/certify) [![Coverage Status](https://coveralls.io/repos/github/fkonigy/certify/badge.svg)](https://coveralls.io/github/fkonigy/certify)
+[![Code Climate](https://codeclimate.com/github/fkonigy/certify/badges/gpa.svg)](https://codeclimate.com/github/fkonigy/certify)
+
 
 # README
 
