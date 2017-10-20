@@ -1,0 +1,23 @@
+<h1>Certificate Authorities (CA)</h1>
+<%= link_to 'New CA', new_ca_path %>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Serial Number</th>
+  </tr>
+
+  <% @cas.each do |ca| %>
+  <tr>
+    <td>
+      <%= ca.subject %>
+    </td>
+    <td>
+      <%= ca.serial_number %>
+    </td>
+    <td>
+      <%= link_to 'Show', ca_path(ca) %>
+    </td>
+  </tr>
+  <% end %>
+</table

@@ -1,0 +1,5 @@
+<%= form_with model: @ca do |form| %>
+Subject: <%= form.text_field :subject, :id => :subject %> <br/>
+Serial Number: <%= form.text_field :serial_number, :id => :serial_number %> <br/>
+<%= form.submit 'Create CA' %>
+<% end %>

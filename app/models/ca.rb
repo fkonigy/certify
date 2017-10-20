@@ -1,0 +1,2 @@
+class Ca < ApplicationRecord
+end
