@@ -2,6 +2,7 @@
 - [![Build Status](https://travis-ci.org/fkonigy/certify.svg?branch=master)](https://travis-ci.org/fkonigy/certify)
 - [![Maintainability](https://api.codeclimate.com/v1/badges/07ead6d44575f43f7f66/maintainability)](https://codeclimate.com/github/fkonigy/certify/maintainability)
 - [![Test Coverage](https://api.codeclimate.com/v1/badges/07ead6d44575f43f7f66/test_coverage)](https://codeclimate.com/github/fkonigy/certify/test_coverage)
+- [![Coverage Status](https://coveralls.io/repos/github/fkonigy/certify/badge.svg?branch=master)](https://coveralls.io/github/fkonigy/certify?branch=master)
 
 
 # README
