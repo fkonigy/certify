@@ -22,8 +22,16 @@ class CasController < ApplicationController
     @ca = Ca.find(params[:id])
   end
 
+  def destroy
+    @ca = Ca.find params[:id]
+    @ca.destroy
+
+    redirect_to cas_path
+  end
+
   private
   def ca_params
-    params.require(:ca).permit(:subject, :serial_number)
+    params.require(:ca).permit(:subject, :serial_number, :not_before, :not_after)
   end
+
 end

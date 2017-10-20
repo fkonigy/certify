@@ -6,6 +6,7 @@
     <th>Name</th>
     <th>Serial Number</th>
     <th></th>
+    <th></th>
   </tr>
 
   <% @cas.each do |ca| %>
@@ -18,6 +19,12 @@
     </td>
     <td>
       <%= link_to 'Show', ca_path(ca) %>
+    </td>
+    <td>
+      <%= link_to 'Remove', ca_path(ca),
+          method: :delete,
+          data: {confirm: 'Are you sure?'}
+      %>
     </td>
   </tr>
   <% end %>
