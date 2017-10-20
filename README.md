@@ -1,5 +1,5 @@
 # Status
-[https://travis-ci.org/fkonigy/certify.svg?branch=master](https://travis-ci.org/fkonigy/certify)
+[![Build Status](https://travis-ci.org/fkonigy/certify.svg?branch=master)](https://travis-ci.org/fkonigy/certify)
 
 # README
 
