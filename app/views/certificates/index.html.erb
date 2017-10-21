@@ -1,0 +1,31 @@
+<h1>CA Certificates</h1>
+<%= link_to 'New Certificate', new_certificate_path %>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Serial Number</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @certificates.each do |cert| %>
+  <tr>
+    <td>
+      <%= cert.subject %>
+    </td>
+    <td>
+      <%= cert.serial_number %>
+    </td>
+    <td>
+      <%= link_to 'Show', certificate_path(cert) %>
+    </td>
+    <td>
+      <%= link_to 'Remove', certificate_path(cert),
+          method: :delete,
+          data: {confirm: 'Are you sure?'}
+      %>
+    </td>
+  </tr>
+  <% end %>
+</table

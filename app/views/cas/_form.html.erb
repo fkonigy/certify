@@ -1,7 +1,4 @@
 <%= form_with model: @ca do |form| %>
-Subject: <%= form.text_field :subject, :id => :subject %> <br/>
-Serial Number: <%= form.text_field :serial_number, :id => :serial_number %> <br/>
-Not Before: <%= form.text_field :not_before, :id => :not_before %> <br/>
-Not After: <%= form.text_field :not_after, :id => :not_after %> <br/>
+Name: <%= form.text_field :name, :id => :name %> <br/>
 <%= form.submit 'Submit' %>
 <% end %>

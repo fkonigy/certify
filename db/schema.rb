@@ -10,15 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020192143) do
+ActiveRecord::Schema.define(version: 20171021191453) do
 
   create_table "cas", force: :cascade do |t|
-    t.string "subject"
-    t.integer "serial_number"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "certificates", force: :cascade do |t|
+    t.integer "ca_id"
+    t.string "subject"
+    t.string "issuer"
+    t.integer "serial_number"
     t.date "not_before"
     t.date "not_after"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ca_id"], name: "index_certificates_on_ca_id"
   end
 
 end

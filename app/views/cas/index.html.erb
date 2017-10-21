@@ -4,27 +4,16 @@
 <table border="1">
   <tr>
     <th>Name</th>
-    <th>Serial Number</th>
-    <th></th>
     <th></th>
   </tr>
 
   <% @cas.each do |ca| %>
   <tr>
     <td>
-      <%= ca.subject %>
-    </td>
-    <td>
-      <%= ca.serial_number %>
+      <%= ca.name %>
     </td>
     <td>
       <%= link_to 'Show', ca_path(ca) %>
-    </td>
-    <td>
-      <%= link_to 'Remove', ca_path(ca),
-          method: :delete,
-          data: {confirm: 'Are you sure?'}
-      %>
     </td>
   </tr>
   <% end %>

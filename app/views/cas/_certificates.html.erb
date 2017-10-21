@@ -1,0 +1,18 @@
+<table border="1">
+  <tr>
+    <th>Subject</th>
+    <th>Issuer</th>
+    <th>Serial Number</th>
+    <th>NotBefore</th>
+    <th>Not After</th>
+  </tr>
+  <% @ca.certificates.each do |cert| %>
+  <tr>
+    <td><%= cert.subject %></td>
+    <td><%= cert.issuer %></td>
+    <td><%= cert.serial_number %></td>
+    <td><%= cert.not_before %></td>
+    <td><%= cert.not_after %></td>
+  </tr>
+  <% end %>
+</table>

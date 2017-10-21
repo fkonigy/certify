@@ -31,7 +31,7 @@ class CasController < ApplicationController
 
   private
   def ca_params
-    params.require(:ca).permit(:subject, :serial_number, :not_before, :not_after)
+    params.require(:ca).permit(:name)
   end
 
 end
