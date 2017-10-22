@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'cas#index'
 
   resources :cas do
-    resource :certificates
+    resources :certificates
   end
 end
