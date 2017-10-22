@@ -1,4 +1,5 @@
 <%= form_with model: @ca do |form| %>
 Name: <%= form.text_field :name, :id => :name %> <br/>
 <%= form.submit 'Submit' %>
+<%= link_to 'Back', cas_path %>
 <% end %>

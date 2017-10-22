@@ -5,4 +5,5 @@ Serial Number: <%= form.text_field :serial_number, :id => :serial_number %> <br/
 Not Before: <%= form.text_field :not_before, :id => :not_before %> <br/>
 Not After: <%= form.text_field :not_after, :id => :not_after %> <br/>
 <%= form.submit 'Submit' %>
+<%= link_to 'Back', ca_path(@ca) %>
 <% end %>
