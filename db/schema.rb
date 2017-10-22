@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021191453) do
+ActiveRecord::Schema.define(version: 20171022185532) do
 
   create_table "cas", force: :cascade do |t|
     t.string "name"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20171021191453) do
     t.date "not_after"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "keys"
+    t.string "cert_pem"
     t.index ["ca_id"], name: "index_certificates_on_ca_id"
   end
 
