@@ -11,18 +11,30 @@ class CertificatesController < ApplicationController
     @ca.certificates << @certificate
     #------------------------------------------------------
     key = PKey::RSA.new 2048
-    name = X509::Name.parse 'CN=nobody/DC=example'
+    name = X509::Name.parse 'CN=fshahy/DC=com'
 
     cert = X509::Certificate.new
     cert.version = 3
-    cert.serial = certificate_params[:serial_number].to_i
+    cert.serial = certificate_params[:serial_number].to_i(16)
     cert.not_before = Time.now
-    cert.not_after = Time.now + 3600
+    cert.not_after = Time.now + 3600 * 24 * 365
 
     cert.public_key = key.public_key
     cert.subject = name
+    cert.issuer = name
 
-    cert.sign key, Digest::SHA1.new
+    ef = X509::ExtensionFactory.new
+    bc = ef.create_extension 'basicConstraints', 'CA:TRUE'
+    ku = ef.create_extension 'keyUsage', 'keyEncipherment,dataEncipherment,digitalSignature'
+    ef.subject_certificate = cert
+    ef.issuer_certificate = cert
+    ski = ef.create_extension 'subjectKeyIdentifier', 'hash'
+
+    cert.add_extension bc
+    cert.add_extension ku
+    cert.add_extension ski
+
+    cert.sign key, Digest::SHA256.new
 
     @certificate.cert_pem = cert.to_pem
     #------------------------------------------------------
@@ -37,7 +49,6 @@ class CertificatesController < ApplicationController
   end
 
   def show
-    puts params
     @ca = Ca.find params[:ca_id]
     @cert = @ca.certificates.find params[:id]
     @certificates = @ca.certificates.all
