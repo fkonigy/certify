@@ -9,7 +9,7 @@
 
 Create and manage certificate authorities (CA) both root and intermediate.
 
-Things you may want to cover:
+What is Certify:
 
 * Ruby 2.4.1
 
@@ -24,3 +24,5 @@ Things you may want to cover:
 * Create certificate profiles
 
 * Issue certificate based on profiles
+
+* Store keys in database (support for PKCS#11 will be added later)
